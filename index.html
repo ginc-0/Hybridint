@@ -23,6 +23,8 @@
 <!-- Swiper.js for testimonial carousel -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<!-- Font Awesome 6 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-white text-gray-800 font-body">
 
@@ -187,6 +189,43 @@
         </div>
       </div>
     </div>
+    <!-- Why Choose Us -->
+<section id="why-us" class="py-20 bg-gray-100" data-aos="fade-up">
+  <div class="container mx-auto text-center mb-12">
+    <h2 class="text-4xl font-bold text-primary font-display">Why Choose Hybrid Interiors?</h2>
+    <p class="text-gray-600 mt-2 max-w-xl mx-auto">We don’t just decorate — we design with purpose, functionality, and beauty tailored to your lifestyle.</p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-6 text-left">
+    <!-- Reason 1 -->
+    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition" data-aos="zoom-in">
+      <i class="fas fa-paint-roller text-accent text-4xl mb-4"></i>
+      <h3 class="text-xl font-semibold text-primary mb-2">Custom Designs</h3>
+      <p class="text-gray-700">Every space is unique — we tailor each design to reflect your vision, values, and lifestyle.</p>
+    </div>
+
+    <!-- Reason 2 -->
+    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="100">
+      <i class="fas fa-tools text-accent text-4xl mb-4"></i>
+      <h3 class="text-xl font-semibold text-primary mb-2">Quality Workmanship</h3>
+      <p class="text-gray-700">We work with skilled local craftsmen using durable, eco-friendly materials and finishes.</p>
+    </div>
+
+    <!-- Reason 3 -->
+    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="200">
+      <i class="fas fa-users text-accent text-4xl mb-4"></i>
+      <h3 class="text-xl font-semibold text-primary mb-2">Client Collaboration</h3>
+      <p class="text-gray-700">We involve you at every step, from consultation to completion, ensuring satisfaction and style.</p>
+    </div>
+
+    <!-- Reason 4 -->
+    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="300">
+      <i class="fas fa-clock text-accent text-4xl mb-4"></i>
+      <h3 class="text-xl font-semibold text-primary mb-2">On-Time Delivery</h3>
+      <p class="text-gray-700">Your time matters — we deliver projects on schedule without compromising quality.</p>
+    </div>
+  </div>
+</section>
 
     <!-- Navigation buttons -->
     <div class="flex justify-center mt-6 gap-4">
@@ -199,17 +238,33 @@
 <section id="contact" class="py-20 bg-white" data-aos="fade-up">
   <div class="container mx-auto text-center max-w-lg">
     <h2 class="text-3xl font-bold text-primary font-display mb-6">Contact Us</h2>
-    <form action="https://formsubmit.co/YOUR_EMAIL" method="POST" class="space-y-4 text-left">
+    <form action="https://formsubmit.co/hybridinteriors254@gmail.com" method="POST" class="space-y-4 text-left">
       <input name="name" placeholder="Your Name" class="w-full p-3 border rounded" required/>
       <input name="email" type="email" placeholder="Email Address" class="w-full p-3 border rounded" required/>
       <textarea name="message" rows="4" placeholder="Your Message" class="w-full p-3 border rounded"></textarea>
       <button type="submit" class="w-full bg-primary text-white py-3 rounded hover:bg-primary/90">Send Message</button>
     </form>
-    <p class="mt-4">or <a href="https://wa.me/254708452111" class="text-accent font-semibold">Chat on WhatsApp</a></p>
+   
   </div>
 </section>
+<footer class="bg-gray-800 text-white text-center py-8">
+  <div class="flex justify-center gap-6 mb-4">
+    <a href="https://wa.me/254708452111" target="_blank" class="text-white hover:text-accent text-2xl">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://facebook.com/yourpage" target="_blank" class="text-white hover:text-accent text-2xl">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://instagram.com/yourhandle" target="_blank" class="text-white hover:text-accent text-2xl">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://twitter.com/yourhandle" target="_blank" class="text-white hover:text-accent text-2xl">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </div>
+  <p class="text-sm">&copy; 2025 Hybrid Interiors. All rights reserved.</p>
+</footer>
 
-<footer class="bg-gray-800 text-white text-center py-6">&copy; 2025 Hybrid Interiors</footer>
 
 <script>AOS.init({once:true,duration:1000});</script>
 <script>
@@ -231,5 +286,13 @@
     },
   });
 </script>
+<!-- Floating WhatsApp Chat Button -->
+<a href="https://wa.me/254708452111?text=Hello%20Hybrid%20Interiors%2C%20I'm%20interested%20in%20your%20services." 
+   class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white text-3xl rounded-full p-4 shadow-lg z-50" 
+   target="_blank" 
+   aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
 </body>
 </html>
