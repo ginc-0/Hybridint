@@ -17,6 +17,12 @@
   </script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Lightbox2 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+<!-- Swiper.js for testimonial carousel -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </head>
 <body class="bg-white text-gray-800 font-body">
 
@@ -109,23 +115,86 @@
     </div>
   </div>
 </section>
-
-<!-- Gallery -->
-<section id="gallery" class="py-20 bg-gray-50" data-aos="fade-up">
-  <div class="container mx-auto text-center mb-10">
-    <h2 class="text-4xl font-bold text-accent font-display">Our Work</h2>
-    <p class="text-gray-600 mt-2 max-w-xl mx-auto">Explore some of our completed interior design projects.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
+  <a href="images/hero1.jpg" data-lightbox="gallery" data-title="Modern Living Room">
+    <img src="images/hero1.jpg" alt="Project 1" class="rounded shadow hover:scale-105 transition duration-300" data-aos="zoom-in">
+  </a>
+  <a href="images/hero2.jpg" data-lightbox="gallery" data-title="Sleek Office Setup">
+    <img src="images/hero2.jpg" alt="Project 2" class="rounded shadow hover:scale-105 transition duration-300" data-aos="fade-up">
+  </a>
+  <a href="images/hero3.jpg" data-lightbox="gallery" data-title="Luxury Bedroom">
+    <img src="images/hero3.jpg" alt="Project 3" class="rounded shadow hover:scale-105 transition duration-300" data-aos="zoom-in">
+  </a>
+  <a href="images/hero4.jpg" data-lightbox="gallery" data-title="Elegant Kitchen">
+    <img src="images/hero4.jpg" alt="Project 4" class="rounded shadow hover:scale-105 transition duration-300" data-aos="fade-up">
+  </a>
+  <a href="images/hero5.jpg" data-lightbox="gallery" data-title="Bold Color Palette">
+    <img src="images/hero5.jpg" alt="Project 5" class="rounded shadow hover:scale-105 transition duration-300" data-aos="zoom-in">
+  </a>
+  <a href="images/hero6.jpg" data-lightbox="gallery" data-title="Minimalist Workspace">
+    <img src="images/hero6.jpg" alt="Project 6" class="rounded shadow hover:scale-105 transition duration-300" data-aos="fade-up">
+  </a>
+  <a href="images/hero7.jpg" data-lightbox="gallery" data-title="Textured Walls">
+    <img src="images/hero7.jpg" alt="Project 7" class="rounded shadow hover:scale-105 transition duration-300" data-aos="zoom-in">
+  </a>
+  <a href="images/hero8.jpg" data-lightbox="gallery" data-title="Soft Lighting">
+    <img src="images/hero8.jpg" alt="Project 8" class="rounded shadow hover:scale-105 transition duration-300" data-aos="fade-up">
+  </a>
+  <a href="images/hero9.jpg" data-lightbox="gallery" data-title="Artistic Decor">
+    <img src="images/hero9.jpg" alt="Project 9" class="rounded shadow hover:scale-105 transition duration-300" data-aos="zoom-in">
+  </a>
+  <a href="images/hero10.jpg" data-lightbox="gallery" data-title="Natural Wood Finish">
+    <img src="images/hero10.jpg" alt="Project 10" class="rounded shadow hover:scale-105 transition duration-300" data-aos="fade-up">
+  </a>
+  <a href="images/hero11.jpg" data-lightbox="gallery" data-title="Ceiling Design">
+    <img src="images/hero11.jpg" alt="Project 11" class="rounded shadow hover:scale-105 transition duration-300" data-aos="zoom-in">
+  </a>
+  <a href="images/hero12.jpg" data-lightbox="gallery" data-title="Window Seating">
+    <img src="images/hero12.jpg" alt="Project 12" class="rounded shadow hover:scale-105 transition duration-300" data-aos="fade-up">
+  </a>
+</div>
+<!-- Testimonials Carousel -->
+<section id="testimonials" class="py-20 bg-white" data-aos="fade-up">
+  <div class="container mx-auto text-center mb-12">
+    <h2 class="text-4xl font-bold text-accent font-display">What Our Clients Say</h2>
+    <p class="text-gray-600 mt-2 max-w-xl mx-auto">We’ve worked with homeowners, architects, and developers across Kenya — here’s what they say about us.</p>
   </div>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
-    <img src="images/work1.jpg" alt="Project 1" class="rounded shadow hover:scale-105 transition duration-300"/>
-    <img src="images/work2.jpg" alt="Project 2" class="rounded shadow hover:scale-105 transition duration-300"/>
-    <img src="images/work3.jpg" alt="Project 3" class="rounded shadow hover:scale-105 transition duration-300"/>
-    <img src="images/work4.jpg" alt="Project 4" class="rounded shadow hover:scale-105 transition duration-300"/>
-    <img src="images/work5.jpg" alt="Project 5" class="rounded shadow hover:scale-105 transition duration-300"/>
-    <img src="images/work6.jpg" alt="Project 6" class="rounded shadow hover:scale-105 transition duration-300"/>
+
+  <div class="swiper w-full max-w-4xl mx-auto px-4">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide bg-gray-50 p-6 rounded-xl shadow-md">
+        <div class="flex flex-col items-center text-center">
+          <img src=https://ui-avatars.com/api/?name=john+doe" class="w-20 h-20 rounded-full mb-4" alt="Client 1">
+          <p class="italic text-gray-700">“Hybrid Interiors transformed my living room into a space that feels like a resort. Their team listened and delivered exactly what I envisioned.”</p>
+          <p class="mt-4 font-semibold text-primary">— Sarah N., Nairobi</p>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide bg-gray-50 p-6 rounded-xl shadow-md">
+        <div class="flex flex-col items-center text-center">
+          <img src="https://ui-avatars.com/api/?name=sarah+N " class="w-20 h-20 rounded-full mb-4" alt="Client 2">
+          <p class="italic text-gray-700">“Professional, artistic, and reliable. They redid our office and our clients now compliment the design!”</p>
+          <p class="mt-4 font-semibold text-primary">— Eric M., Westlands</p>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="swiper-slide bg-gray-50 p-6 rounded-xl shadow-md">
+        <div class="flex flex-col items-center text-center">
+          <img src="https://ui-avatars.com/api/?name=Linda+k" class="w-20 h-20 rounded-full mb-4" alt="Client 3">
+          <p class="italic text-gray-700">“They designed and installed my custom kitchen and wardrobes. Very precise work, and they kept me updated the whole time.”</p>
+          <p class="mt-4 font-semibold text-primary">— Linda K., Kiambu</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="flex justify-center mt-6 gap-4">
+      <button class="swiper-button-prev !static text-primary hover:text-accent"></button>
+      <button class="swiper-button-next !static text-primary hover:text-accent"></button>
+    </div>
   </div>
 </section>
-
 <!-- Contact -->
 <section id="contact" class="py-20 bg-white" data-aos="fade-up">
   <div class="container mx-auto text-center max-w-lg">
@@ -148,6 +217,19 @@
     const menu = document.getElementById('mobile-menu');
     menu.classList.toggle('hidden');
   };
+</script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
 </script>
 </body>
 </html>
