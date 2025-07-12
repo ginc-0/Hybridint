@@ -1,5 +1,133 @@
 <!DOCTYPE html>
-<html>
-  <head><title>Test</title></head>
-  <body><h1>Hybrid Interiors is Live</h1></body>
-</html><!-- Final version with grey gallery will be written here -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hybrid Interiors</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#2E7D32', accent: '#D84315' },
+          fontFamily: { display: ['Playfair Display','serif'], body: ['Inter','sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body class="bg-white text-gray-800 font-body">
+
+<!-- Responsive Navbar -->
+<nav class="bg-white shadow sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <a href="/"><img src="images/logo.png" alt="Logo" class="h-10" /></a>
+      <div class="hidden md:flex space-x-6">
+        <a href="#about" class="hover:text-primary">About</a>
+        <a href="#services" class="hover:text-primary">Services</a>
+        <a href="#gallery" class="hover:text-primary">Gallery</a>
+        <a href="#contact" class="hover:text-primary">Contact</a>
+      </div>
+      <div class="md:hidden flex items-center">
+        <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+    <a href="#about" class="block hover:text-primary">About</a>
+    <a href="#services" class="block hover:text-primary">Services</a>
+    <a href="#gallery" class="block hover:text-primary">Gallery</a>
+    <a href="#contact" class="block hover:text-primary">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('images/hero-placeholder.jpg');">
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="relative z-10 text-center text-white p-8 backdrop-blur-md bg-white/10 rounded-lg shadow-lg" data-aos="fade-up">
+    <h1 class="text-5xl font-display font-bold mb-4">Transforming Spaces,</h1>
+    <h2 class="text-3xl font-light mb-6">Defining Lifestyles</h2>
+    <a href="#contact" class="bg-primary px-6 py-3 rounded-full hover:bg-primary/90 text-white transition">Book Consultation</a>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-20 bg-white" data-aos="fade-up">
+  <div class="container mx-auto text-center max-w-3xl">
+    <h2 class="text-4xl font-bold text-accent font-display mb-6">About Us</h2>
+    <p class="text-gray-700 leading-relaxed">Hybrid Interiors blends modern design with Kenyan warmth. We create spaces that reflect your personality and elevate daily living—from kitchens to offices.</p>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="py-20 bg-gray-50" data-aos="fade-up">
+  <div class="container mx-auto text-center mb-10">
+    <h2 class="text-4xl font-bold text-primary font-display">Our Services</h2>
+    <p class="text-gray-600 mt-2 max-w-xl mx-auto">Tailored interior design, fit‑outs, and furniture for home and commercial spaces.</p>
+  </div>
+  <div class="container mx-auto grid md:grid-cols-3 gap-8 px-4">
+    <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden">
+      <img src="images/service1.jpg" alt="Residential Design" class="w-full h-48 object-cover"/>
+      <div class="p-6"><h3 class="text-2xl font-semibold text-accent mb-2">Residential Design</h3><p class="text-gray-700">Kitchens, wardrobes, living rooms and custom interiors that speak home.</p></div>
+    </div>
+    <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden">
+      <img src="images/service2.jpg" alt="Commercial Spaces" class="w-full h-48 object-cover"/>
+      <div class="p-6"><h3 class="text-2xl font-semibold text-accent mb-2">Commercial Spaces</h3><p class="text-gray-700">Functional and aesthetic office, retail, and hospitality interiors.</p></div>
+    </div>
+    <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden">
+      <img src="images/service3.jpg" alt="Furniture & Decor" class="w-full h-48 object-cover"/>
+      <div class="p-6"><h3 class="text-2xl font-semibold text-accent mb-2">Furniture & Decor</h3><p class="text-gray-700">Custom furniture and decor solutions designed to reflect your identity.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery" class="py-20 bg-gray-50" data-aos="fade-up">
+  <div class="container mx-auto text-center mb-10">
+    <h2 class="text-4xl font-bold text-accent font-display">Our Work</h2>
+    <p class="text-gray-600 mt-2 max-w-xl mx-auto">Explore some of our completed interior design projects.</p>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
+    <img src="images/work1.jpg" alt="Project 1" class="rounded shadow hover:scale-105 transition duration-300"/>
+    <img src="images/work2.jpg" alt="Project 2" class="rounded shadow hover:scale-105 transition duration-300"/>
+    <img src="images/work3.jpg" alt="Project 3" class="rounded shadow hover:scale-105 transition duration-300"/>
+    <img src="images/work4.jpg" alt="Project 4" class="rounded shadow hover:scale-105 transition duration-300"/>
+    <img src="images/work5.jpg" alt="Project 5" class="rounded shadow hover:scale-105 transition duration-300"/>
+    <img src="images/work6.jpg" alt="Project 6" class="rounded shadow hover:scale-105 transition duration-300"/>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-20 bg-white" data-aos="fade-up">
+  <div class="container mx-auto text-center max-w-lg">
+    <h2 class="text-3xl font-bold text-primary font-display mb-6">Contact Us</h2>
+    <form action="https://formsubmit.co/YOUR_EMAIL" method="POST" class="space-y-4 text-left">
+      <input name="name" placeholder="Your Name" class="w-full p-3 border rounded" required/>
+      <input name="email" type="email" placeholder="Email Address" class="w-full p-3 border rounded" required/>
+      <textarea name="message" rows="4" placeholder="Your Message" class="w-full p-3 border rounded"></textarea>
+      <button type="submit" class="w-full bg-primary text-white py-3 rounded hover:bg-primary/90">Send Message</button>
+    </form>
+    <p class="mt-4">or <a href="https://wa.me/254708452111" class="text-accent font-semibold">Chat on WhatsApp</a></p>
+  </div>
+</section>
+
+<footer class="bg-gray-800 text-white text-center py-6">&copy; 2025 Hybrid Interiors</footer>
+
+<script>AOS.init({once:true,duration:1000});</script>
+<script>
+  document.getElementById('menu-toggle').onclick = function () {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  };
+</script>
+</body>
+</html>
