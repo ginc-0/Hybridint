@@ -76,17 +76,23 @@
   <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
     <a href="#about" class="block hover:text-primary">About</a>
     <a href="#services" class="block hover:text-primary">Services</a>
-    <a href="#gallery" class="block hover:text-primary">Gallery</a>
+    <a href="#gallery" class="block hover:text-primary">portfolio</a>
     <a href="#contact" class="block hover:text-primary">Contact</a>
   </div>
 </nav>
 <!-- Hero Slideshow with 10 Images -->
-<section id="hero" class="relative h-screen flex items-center justify-center bg-cover bg-center transition-all duration-1000" style="background-image: url('images/hero1.jpg');">
+<section id="hero" class="relative h-[70vh] flex items-center justify-center bg-cover bg-center transition-all duration-1000" style="background-image: url('images/hero1.jpg');">
   <div class="absolute inset-0 bg-black/50"></div>
   <div class="relative z-10 text-center text-white p-8 backdrop-blur-md bg-white/10 rounded-lg shadow-lg" data-aos="fade-up">
-    <h1 class="text-5xl font-display font-bold mb-4">Transforming Spaces,</h1>
-    <h2 class="text-3xl font-light mb-6">Defining Lifestyles</h2>
-    <a href="#contact" class="bg-primary px-6 py-3 rounded-full hover:bg-primary/90 text-white transition">Book Consultation</a>
+    <h1 class="text-5xl font-display font-bold mb-4">
+  Your Dream Space, Designed to Inspire
+</h1>
+<h2 class="text-2xl font-light mb-6">
+  Residential. Commercial. Furniture. We create interiors that feel like you — across Nairobi and beyond.
+</h2>
+<a href="#contact" class="bg-accent px-6 py-3 rounded-full hover:bg-accent/90 text-white transition">
+  Get a Free Consultation
+</a>
   </div>
 </section>
 
@@ -108,7 +114,7 @@
   setInterval(() => {
     index = (index + 1) % images.length;
     hero.style.backgroundImage = `url('${images[index]}')`;
-  }, 5000); // 5 seconds per slide
+  }, 3000); // 5 seconds per slide
 </script>
 
 <!-- About -->
@@ -270,7 +276,9 @@
       <input name="name" placeholder="Your Name" class="w-full p-3 border rounded" required/>
       <input name="email" type="email" placeholder="Email Address" class="w-full p-3 border rounded" required/>
       <textarea name="message" rows="4" placeholder="Your Message" class="w-full p-3 border rounded"></textarea>
-      <button type="submit" class="w-full bg-primary text-white py-3 rounded hover:bg-primary/90">Send Message</button>
+      <button type="submit" class="bg-primary text-white px-4 py-1.5 text-sm rounded-full shadow hover:bg-primary/90 transition duration-300">
+  <i class="fas fa-paper-plane mr-2"></i> Send
+</button>
     </form>
    
   </div>
@@ -297,7 +305,7 @@
     },
   });
 </script>
-<footer class="bg-gray-800 text-white text-center py-8">
+<footer class="bg-gray-800 text-white text-center py-8 pb-20">
   <div class="flex justify-center gap-6 mb-4">
     <!-- Social icons -->
     <a href="https://wa.me/254712345678" target="_blank" class="text-white hover:text-accent text-2xl">
@@ -329,12 +337,14 @@
   <p class="text-sm mt-4">&copy; 2025 Hybrid Interiors. All rights reserved.</p>
 </footer>
 <!-- Floating WhatsApp Chat Button -->
-<a href="https://wa.me/254708452111?text=Hello%20Hybrid%20Interiors%2C%20I'm%20interested%20in%20your%20services." 
-   class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white text-3xl rounded-full p-4 shadow-lg z-50" 
+<a href="https://wa.me/254745786665?text=Hello%20Hybrid%20Interiors%2C%20I'm%20interested%20in%20your%20services." 
+   class="fixed bottom-20 right-6 bg-green-500 hover:bg-green-600 text-white text-3xl rounded-full p-4 shadow-lg z-50" 
    target="_blank" 
    aria-label="Chat on WhatsApp">
   <i class="fab fa-whatsapp"></i>
 </a>
-
+<a href="#contact" class="fixed bottom-6 right-6 z-50 bg-accent text-white px-4 py-3 rounded-full shadow-lg hover:bg-accent/90 transition duration-300">
+  Book Now
+</a>
 </body>
 </html>
