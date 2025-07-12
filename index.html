@@ -2,29 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hybrid Interiors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Hybrid Interiors – Interior Design in Kenya</title>
+  <meta name="description" content="Hybrid Interiors is a Kenya-based interior design company offering custom furniture, residential, and commercial space transformations.">
+  <meta name="keywords" content="interior design Kenya, home decor Nairobi, custom furniture, Hybrid Interiors, residential interiors, commercial design Kenya">
+  <meta name="author" content="Hybrid Interiors">
+
+  <!-- Social Sharing -->
+  <meta property="og:title" content="Hybrid Interiors – Interior Design in Kenya" />
+  <meta property="og:description" content="Explore our residential, commercial, and furniture design solutions." />
+  <meta property="og:image" content="https://ginc-0.github.io/Hybridint/images/hero1.jpg" />
+  <meta property="og:url" content="https://ginc-0.github.io/Hybridint/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png" />
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { primary: '#2E7D32', accent: '#D84315' },
-          fontFamily: { display: ['Playfair Display','serif'], body: ['Inter','sans-serif'] }
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#2E7D32',   // Hybrid Interiors Green
+          accent: '#D84315'     // Hybrid Interiors Dark Orange
+        },
+        fontFamily: {
+          display: ['Playfair Display', 'serif'],
+          body: ['Inter', 'sans-serif']
         }
       }
     }
-  </script>
+  }
+</script>
+
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+
+  <!-- Lightbox -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+
+  <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- Lightbox2 -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-<!-- Swiper.js for testimonial carousel -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-<!-- Font Awesome 6 -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+</head>
 </head>
 <body class="bg-white text-gray-800 font-body">
 
@@ -247,24 +270,7 @@
    
   </div>
 </section>
-<footer class="bg-gray-800 text-white text-center py-8">
-  <div class="flex justify-center gap-6 mb-4">
-    <a href="https://wa.me/254708452111" target="_blank" class="text-white hover:text-accent text-2xl">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="https://facebook.com/yourpage" target="_blank" class="text-white hover:text-accent text-2xl">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://instagram.com/yourhandle" target="_blank" class="text-white hover:text-accent text-2xl">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://twitter.com/yourhandle" target="_blank" class="text-white hover:text-accent text-2xl">
-      <i class="fab fa-twitter"></i>
-    </a>
-  </div>
-  <p class="text-sm">&copy; 2025 Hybrid Interiors. All rights reserved.</p>
-</footer>
-
+<
 
 <script>AOS.init({once:true,duration:1000});</script>
 <script>
@@ -286,6 +292,34 @@
     },
   });
 </script>
+<footer class="bg-gray-800 text-white text-center py-8">
+  <div class="flex justify-center gap-6 mb-4">
+    <!-- Social icons -->
+    <a href="https://wa.me/254712345678" target="_blank" class="text-white hover:text-accent text-2xl">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://facebook.com/yourpage" target="_blank" class="text-white hover:text-accent text-2xl">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://instagram.com/yourhandle" target="_blank" class="text-white hover:text-accent text-2xl">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+
+  <p class="text-sm mt-2">📧 Email: 
+    <a href="mailto:hybridinteriors@gmail.com" class="underline hover:text-accent">
+      hybridinteriors@gmail.com
+    </a>
+  </p>
+
+  <p class="text-sm mt-1">📞 Phone:
+    <a href="tel:+" class="underline hover:text-accent">
+      +254708452111
+    </a>
+  </p>
+
+  <p class="text-sm mt-4">&copy; 2025 Hybrid Interiors. All rights reserved.</p>
+</footer>
 <!-- Floating WhatsApp Chat Button -->
 <a href="https://wa.me/254708452111?text=Hello%20Hybrid%20Interiors%2C%20I'm%20interested%20in%20your%20services." 
    class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white text-3xl rounded-full p-4 shadow-lg z-50" 
