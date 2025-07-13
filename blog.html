@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Blog | Hybrid Interiors</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .primary { color: #2E7D32; }
+    .accent { color: #D84315; }
+  </style>
 </head>
-<body class="bg-white text-gray-800 font-sans">
-  <div class="max-w-4xl mx-auto p-6">
-    <h1 class="text-4xl font-bold text-primary mb-6">Hybrid Interiors Blog</h1>
-    <p>This page is under development to display your blog posts from Markdown.</p>
-    <p>You can still manage posts via <code>/admin</code>.</p>
+<body class="bg-white text-gray-800">
+  <div class="max-w-4xl mx-auto px-4 py-10">
+    <h1 class="text-4xl font-bold primary mb-10 text-center">📝 Hybrid Interiors Blog</h1>
+
+    <!-- Blog Post Preview -->
+    <article class="mb-10 border-b pb-6">
+      <h2 class="text-2xl font-semibold accent">Inside a Modern Nairobi Home — A Full Tour</h2>
+      <p class="text-sm text-gray-500 mt-1">Posted on July 11, 2025</p>
+      <p class="text-gray-700 mt-3">Join us as we walk through this warm, luxurious home design project we completed in Kilimani, Nairobi.</p>
+      <a href="#" class="inline-block mt-3 text-primary underline hover:text-accent">Read more</a>
+    </article>
+
+    <p class="text-center text-sm text-gray-500 mt-12">More blog posts coming soon...</p>
   </div>
 </body>
 </html>
