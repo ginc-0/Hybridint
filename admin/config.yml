@@ -1,10 +1,11 @@
-# Updated config
 backend:
   name: github
   repo: ginc-0/Hybridint
   branch: main
+
 media_folder: "images"
 public_folder: "/images"
+
 collections:
   - name: "blog"
     label: "Blog"
