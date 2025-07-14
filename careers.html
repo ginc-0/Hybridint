@@ -65,6 +65,48 @@
   <div class="text-center mt-8 text-gray-600">
     <p>Didn't find your role? Send your CV anyway:</p>
     <a  href="mailto:hybridinterior254@gmail.com?subject=General Job Inquiry" class="text-primary underline">Email us</a>
+    <section id="apply" class="py-20 bg-white">
+  <div class="max-w-xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-primary mb-6 text-center">Apply for a Role</h2>
+    <form action="https://formsubmit.co/hybridinteriors254@gmail.com" method="POST" class="space-y-4 bg-gray-50 p-6 rounded shadow">
+      <input type="hidden" name="_captcha" value="false">
+      
+      <label class="block">
+        <span class="text-gray-700">Full Name</span>
+        <input type="text" name="name" required class="mt-1 block w-full border rounded p-2" placeholder="Jane Doe" />
+      </label>
+      
+      <label class="block">
+        <span class="text-gray-700">Email Address</span>
+        <input type="email" name="email" required class="mt-1 block w-full border rounded p-2" placeholder="jane@example.com" />
+      </label>
+      
+      <label class="block">
+        <span class="text-gray-700">Phone Number</span>
+        <input type="tel" name="phone" required class="mt-1 block w-full border rounded p-2" placeholder="07xx..." />
+      </label>
+
+      <label class="block">
+        <span class="text-gray-700">Position Applying For</span>
+        <select name="position" required class="mt-1 block w-full border rounded p-2">
+          <option value="" disabled selected>Select a role</option>
+          <option value="Interior Designer">Interior Designer</option>
+          <option value="Project Manager">Project Manager</option>
+          <option value="Sales & Marketing Executive">Sales & Marketing Executive</option>
+        </select>
+      </label>
+      
+      <label class="block">
+        <span class="text-gray-700">Your Message</span>
+        <textarea name="message" rows="4" required class="mt-1 block w-full border rounded p-2" placeholder="Tell us about yourself..."></textarea>
+      </label>
+      
+      <button type="submit" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition">
+        <i class="fas fa-paper-plane mr-2"></i> Send Application
+      </button>
+    </form>
+  </div>
+</section>
   </div>
 </section>
 
