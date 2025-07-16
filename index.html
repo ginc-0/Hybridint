@@ -112,17 +112,12 @@
     'images/hero3.jpg',
     'images/hero4.jpg',
     'images/hero5.jpg',
-    'images/hero6.jpg',
-    'images/hero7.jpg',
-    'images/hero8.jpg',
-    'images/hero9.jpg',
-    'images/hero10.jpg'
   ];
   let index = 0;
   setInterval(() => {
     index = (index + 1) % images.length;
     hero.style.backgroundImage = `url('${images[index]}')`;
-  }, 3000); // 5 seconds per slide
+  }, 3000); //  5seconds per slide
 </script>
 
 <!-- About -->
