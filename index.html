@@ -340,7 +340,12 @@
     </div>
   </div>
 </section>
-    </a>
+    <!-- Portfolio Popup Trigger Button -->
+<div class="text-center mt-10" data-aos="fade-up">
+  <button onclick="openPortfolioModal()" class="bg-primary text-white px-6 py-3 rounded-full shadow hover:bg-primary/90 transition">
+    📂 View Our Company Portfolio
+  </button>
+</div>
   </div>
 </section>
 <!-- Contact -->
@@ -428,7 +433,43 @@
 <script>
   AOS.init({ once: true, duration: 1000 });
 </script>
+<!-- Portfolio Modal -->
+<div id="portfolioModal" class="fixed inset-0 bg-black/70 z-50 hidden items-center justify-center">
+  <div class="relative bg-white rounded-lg shadow-lg max-w-4xl w-full mx-4 md:mx-auto overflow-hidden">
+    
+    <!-- Close Button -->
+    <button onclick="closePortfolioModal()" class="absolute top-3 right-4 text-gray-500 hover:text-red-500 text-2xl">
+      &times;
+    </button>
 
+    <!-- Modal Content -->
+    <div class="p-6 space-y-4">
+      <h2 class="text-2xl font-bold text-primary text-center font-display">📘 Hybrid Interiors Portfolio</h2>
+      <p class="text-gray-700 text-center">Scroll through a preview of our most recent projects and client showcases.</p>
+
+      <!-- Embedded PDF Preview or Images -->
+      <div class="overflow-auto max-h-[70vh] rounded border border-gray-200">
+        <iframe src="/file/HYBRID INTERIORS COMPANY PROFILE 2023 (1updated) (01).pdf" width="100%" height="500px" class="w-full rounded" frameborder="0"></iframe>
+      </div>
+
+      <!-- Optional: Download Button -->
+      <div class="text-center">
+        <a href="/file/HYBRID INTERIORS COMPANY PROFILE 2023 (1updated) (01).pdf" download class="inline-block mt-4 bg-primary text-white px-5 py-2 rounded-full shadow hover:bg-primary/90 transition">
+          <i class="fas fa-download mr-2"></i> Download Full Portfolio
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function openPortfolioModal() {
+    document.getElementById("portfolioModal").classList.remove("hidden");
+    document.getElementById("portfolioModal").classList.add("flex");
+  }
+  function closePortfolioModal() {
+    document.getElementById("portfolioModal").classList.add("hidden");
+  }
+</script>
 </body>
 </html>
 <!-- Typed.js CDN -->
