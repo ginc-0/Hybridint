@@ -55,6 +55,8 @@
     animation-delay: 5s, 9s; /* typing starts later, blink also stops */
   }
 </style>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -225,52 +227,122 @@
     </div>
   </div>
 </section>
-<!-- Portfolio Section -->
-<section class="py-16 bg-white">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center text-green-700 mb-10">Our Portfolio</h2>
 
-    <!-- Slider Wrapper -->
-    <div id="slider" class="flex overflow-hidden transition-transform duration-700">
-      <!-- Example Portfolio Items with AOS -->
-      <div class="flex-shrink-0 w-[33.33%] px-2" data-aos="flip-left">
-        <img src="images/hero1.jpg" alt="Project 1" class="w-full h-64 object-cover rounded-xl shadow-md" />
+<section id="portfolio" class="py-12 bg-grey-100">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8 text-green-600"> Our Portfolio</h2>
+
+    <!-- Swiper -->
+    <div class="swiper portfolio-slider" data-aos="fade-up">
+      <div class="swiper-wrapper">
+        <!-- First 6 images in slider -->
+        <div class="swiper-slide">
+          <a href="images/hero1.jpg" data-lightbox="portfolio">
+            <img src="images/hero1.jpg" alt="Portfolio 1"
+              class="rounded-2xl shadow-md hover:scale-105 transition w-full h-64 object-cover"/>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="images/hero2.jpg" data-lightbox="portfolio">
+            <img src="images/hero2.jpg" alt="Portfolio 2"
+              class="rounded-2xl shadow-md hover:scale-105 transition w-full h-64 object-cover"/>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="images/hero3.jpg" data-lightbox="portfolio">
+            <img src="images/hero3.jpg" alt="Portfolio 3"
+              class="rounded-2xl shadow-md hover:scale-105 transition w-full h-64 object-cover"/>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="images/hero4.jpg" data-lightbox="portfolio">
+            <img src="images/hero4.jpg" alt="Portfolio 4"
+              class="rounded-2xl shadow-md hover:scale-105 transition w-full h-64 object-cover"/>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="images/hero5.jpg" data-lightbox="portfolio">
+            <img src="images/hero5.jpg" alt="Portfolio 5"
+              class="rounded-2xl shadow-md hover:scale-105 transition w-full h-64 object-cover"/>
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="images/hero6.jpg" data-lightbox="portfolio">
+            <img src="images/hero6.jpg" alt="Portfolio 6"
+              class="rounded-2xl shadow-md hover:scale-105 transition w-full h-64 object-cover"/>
+          </a>
+        </div>
       </div>
-      <div class="flex-shrink-0 w-[33.33%] px-2" data-aos="flip-left">
-        <img src="images/hero2.jpg" alt="Project 2" class="w-full h-64 object-cover rounded-xl shadow-md" />
-      </div>
-      <div class="flex-shrink-0 w-[33.33%] px-2" data-aos="flip-left">
-        <img src="images/hero3.jpg" alt="Project 3" class="w-full h-64 object-cover rounded-xl shadow-md" />
-      </div>
-      <div class="flex-shrink-0 w-[33.33%] px-2" data-aos="flip-left">
-        <img src="images/hero4.jpg" alt="Project 4" class="w-full h-64 object-cover rounded-xl shadow-md" />
-      </div>
-      <div class="flex-shrink-0 w-[33.33%] px-2" data-aos="flip-left">
-        <img src="images/hero5.jpg" alt="Project 5" class="w-full h-64 object-cover rounded-xl shadow-md" />
-      </div>
-      <div class="flex-shrink-0 w-[33.33%] px-2" data-aos="flip-left">
-        <img src="images/hero6.jpg" alt="Project 6" class="w-full h-64 object-cover rounded-xl shadow-md" />
-      </div>
-      <div class="flex-shrink-0 w-[33.33%] px-2" data-aos="flip-left">
-        <img src="images/hero7.jpg" alt="Project 7" class="w-full h-64 object-cover rounded-xl shadow-md" />
-      </div>
-      <div class="flex-shrink-0 w-[33.33%] px-2" data-aos="flip-left">
-        <img src="images/hero8.jpg" alt="Project 8" class="w-full h-64 object-cover rounded-xl shadow-md" />
-      </div>
-      <div class="flex-shrink-0 w-[33.33%] px-2" data-aos="flip-left">
-        <img src="images/hero9.jpg" alt="Project 9" class="w-full h-64 object-cover rounded-xl shadow-md" />
-      </div>
-      <div class="flex-shrink-0 w-[33.33%] px-2" data-aos="flip-left">
-        <img src="images/hero10.jpg" alt="Project 10" class="w-full h-64 object-cover rounded-xl shadow-md" />
-      </div>
+      <div class="swiper-pagination"></div>
     </div>
 
     <!-- View More Button -->
-    <div class="text-center mt-8">
+    <div class="text-center mt-8" data-aos="zoom-in">
       <button id="viewMoreBtn"
-        class="px-6 py-3 bg-green-600 text-white font-semibold rounded-lg shadow-lg hover:bg-green-700 transform hover:scale-105 transition duration-300">
+        class="px-6 py-3 bg-green-600 text-white rounded-2xl shadow-lg hover:bg-green-700 transition transform hover:scale-105">
         View More
       </button>
+    </div>
+
+    <!-- Hidden Grid for All Images -->
+    <div id="allImages" class="hidden grid grid-cols-2 md:grid-cols-4 gap-4 mt-10" data-aos="fade-up">
+      <!-- Remaining images 7-20 -->
+      <a href="images/hero7.jpg" data-lightbox="portfolio">
+        <img src="images/hero7.jpg" alt="Portfolio 7"
+          class="rounded-2xl shadow-md hover:scale-105 transition w-full h-48 object-cover"/>
+      </a>
+      <a href="images/hero8.jpg" data-lightbox="portfolio">
+        <img src="images/hero8.jpg" alt="Portfolio 8"
+          class="rounded-2xl shadow-md hover:scale-105 transition w-full h-48 object-cover"/>
+      </a>
+      <a href="images/hero9.jpg" data-lightbox="portfolio">
+        <img src="images/hero9.jpg" alt="Portfolio 9"
+          class="rounded-2xl shadow-md hover:scale-105 transition w-full h-48 object-cover"/>
+      </a>
+      <a href="images/hero10.jpg" data-lightbox="portfolio">
+        <img src="images/hero10.jpg" alt="Portfolio 10"
+          class="rounded-2xl shadow-md hover:scale-105 transition w-full h-48 object-cover"/>
+      </a>
+      <a href="images/hero11.jpg" data-lightbox="portfolio">
+        <img src="images/hero11.jpg" alt="Portfolio 11"
+          class="rounded-2xl shadow-md hover:scale-105 transition w-full h-48 object-cover"/>
+      </a>
+      <a href="images/hero12.jpg" data-lightbox="portfolio">
+        <img src="images/hero12.jpg" alt="Portfolio 12"
+          class="rounded-2xl shadow-md hover:scale-105 transition w-full h-48 object-cover"/>
+      </a>
+      <a href="images/hero22.jpg" data-lightbox="portfolio">
+        <img src="images/hero22.jpg" alt="Portfolio 13"
+          class="rounded-2xl shadow-md hover:scale-105 transition w-full h-48 object-cover"/>
+      </a>
+      <a href="images/hero14.jpg" data-lightbox="portfolio">
+        <img src="images/hero14.jpg" alt="Portfolio 14"
+          class="rounded-2xl shadow-md hover:scale-105 transition w-full h-48 object-cover"/>
+      </a>
+      <a href="images/hero15.jpg" data-lightbox="portfolio">
+        <img src="images/hero15.jpg" alt="Portfolio 15"
+          class="rounded-2xl shadow-md hover:scale-105 transition w-full h-48 object-cover"/>
+      </a>
+      <a href="images/hero16.jpg" data-lightbox="portfolio">
+        <img src="images/hero16.jpg" alt="Portfolio 16"
+          class="rounded-2xl shadow-md hover:scale-105 transition w-full h-48 object-cover"/>
+      </a>
+      <a href="images/hero17.jpg" data-lightbox="portfolio">
+        <img src="images/hero17.jpg" alt="Portfolio 17"
+          class="rounded-2xl shadow-md hover:scale-105 transition w-full h-48 object-cover"/>
+      </a>
+      <a href="images/hero18.jpg" data-lightbox="portfolio">
+        <img src="images/hero18.jpg" alt="Portfolio 18"
+          class="rounded-2xl shadow-md hover:scale-105 transition w-full h-48 object-cover"/>
+      </a>
+      <a href="images/hero19.jpg" data-lightbox="portfolio">
+        <img src="images/hero19.jpg" alt="Portfolio 19"
+          class="rounded-2xl shadow-md hover:scale-105 transition w-full h-48 object-cover"/>
+      </a>
+      <a href="images/hero20.jpg" data-lightbox="portfolio">
+        <img src="images/hero20.jpg" alt="Portfolio 20"
+          class="rounded-2xl shadow-md hover:scale-105 transition w-full h-48 object-cover"/>
+      </a>
     </div>
   </div>
 </section>
@@ -313,7 +385,7 @@
     </div>
   </div>
 </section>
->
+
 <!-- Testimonials Carousel -->
 <section id="testimonials" class="py-20 bg-white" data-aos="fade-up">
   <div class="container mx-auto text-center mb-12">
@@ -437,11 +509,39 @@
     </div>
   </div>
 </section>
+<section id="brands" class="py-12 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-2xl md:text-3xl font-bold text-center text-green-700 mb-8" data-aos="fade-up">
+      Brands We've Worked With
+    </h2>
 
-    <!-- Navigation buttons -->
-    <div class="flex justify-center mt-6 gap-4">
-      <button class="swiper-button-prev !static text-primary hover:text-accent"></button>
-      <button class="swiper-button-next !static text-primary hover:text-accent"></button>
+    <!-- Swiper -->
+    <div class="swiper brand-slider" data-aos="fade-up">
+      <div class="swiper-wrapper flex items-center">
+
+        <!-- CocaCola -->
+        <div class="swiper-slide flex items-center justify-center">
+          <img src="https://cdn.simpleicons.org/cocacola/E61A27" alt="CocaCola" class="h-16" />
+        </div>
+
+        <!-- Watu Credit -->
+        <div class="swiper-slide flex items-center justify-center">
+          <img src="/images/watu.png" alt="Watu Credit" class="h-16 object-contain" />
+        </div>
+
+        <!-- GA Insurance -->
+        <div class="swiper-slide flex items-center justify-center">
+          <img src="/images/rename.png" alt="GA Insurance" class="h-16 object-contain" />
+        </div>
+
+        <!-- Victory Farms -->
+        <div class="swiper-slide flex items-center justify-center">
+          <img src="/images/victoryfarms.png" alt="Victory Farms" class="h-16 object-contain" />
+        </div>
+
+      </div>
+      <!-- Pagination -->
+      <div class="swiper-pagination mt-6"></div>
     </div>
   </div>
 </section>
@@ -593,63 +693,79 @@
     loop: true
   });
 </script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Lightbox2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
 <script>
-// Portfolio Slider + Grid with AOS
+  document.addEventListener("DOMContentLoaded", () => {
+    // Initialize Swiper
+    var swiper = new Swiper(".portfolio-slider", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      loop: true,
+      breakpoints: {
+        320: { slidesPerView: 1 },
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
 
-const slider = document.getElementById("slider");
-let scrollAmount = 0;
-const slideInterval = 3000; // 3s
-const slidesVisible = 3;    // Number of images visible at a time
+    // Toggle View More
+    const btn = document.getElementById("viewMoreBtn");
+    const grid = document.getElementById("allImages");
 
-// Calculate width of one slide including padding/margin
-function getSlideWidth() {
-  const firstSlide = slider.querySelector("div");
-  return firstSlide.offsetWidth;
-}
+    btn.addEventListener("click", () => {
+      grid.classList.toggle("hidden");
+      btn.textContent = grid.classList.contains("hidden") ? "View More" : "View Less";
 
-// Auto-slide function
-const autoSlide = () => {
-  const slideWidth = getSlideWidth();
-  const maxScroll = slider.scrollWidth - slider.clientWidth;
+      // refresh AOS so hidden images animate
+      AOS.refresh();
+    });
 
-  if (scrollAmount < maxScroll) {
-    scrollAmount += slideWidth;
-  } else {
-    scrollAmount = 0;
-  }
+    // Init AOS
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
 
-  slider.scrollTo({ left: scrollAmount, behavior: "smooth" });
-};
-
-// Start auto sliding
-let sliderInterval = setInterval(autoSlide, slideInterval);
-
-// View More Button
-document.getElementById("viewMoreBtn").addEventListener("click", () => {
-  // Stop slider
-  clearInterval(sliderInterval);
-
-  // Change slider to grid
-  slider.classList.remove("flex", "overflow-hidden", "transition-transform");
-  slider.classList.add("grid", "grid-cols-1", "sm:grid-cols-2", "md:grid-cols-3", "gap-6");
-
-  // Update each wrapper div
-  slider.querySelectorAll("div").forEach(wrapper => {
-    wrapper.classList.remove("flex-shrink-0", "w-[33.33%]", "px-2");
+    // Lightbox options
+    lightbox.option({
+      resizeDuration: 200,
+      wrapAround: true,
+      fadeDuration: 200
+    });
   });
-
-  // Update each image
-  slider.querySelectorAll("img").forEach(img => {
-    img.classList.remove("h-64", "rounded-xl");
-    img.classList.add("w-full", "h-auto", "rounded-none");
+</script>
+<script>
+  var brandSwiper = new Swiper(".brand-slider", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      640: { slidesPerView: 3 },
+      768: { slidesPerView: 4 },
+      1024: { slidesPerView: 5 },
+    },
   });
-
-  // Hide button after click
-  document.getElementById("viewMoreBtn").style.display = "none";
-
-  // Refresh AOS so grid images animate
-  AOS.refresh();
-});
 </script>
 </body>
 </html>
