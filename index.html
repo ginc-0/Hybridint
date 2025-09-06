@@ -54,6 +54,12 @@
   .delay-2 {
     animation-delay: 5s, 9s; /* typing starts later, blink also stops */
   }
+.about-card {
+  @apply bg-white shadow-lg rounded-2xl p-6 transform transition duration-300 ease-in-out;
+}
+.about-card:hover {
+  @apply shadow-2xl;
+}
 </style>
 <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -158,26 +164,38 @@
   }, 3000); //  5seconds per slide
 </script>
 
-<!-- About -->
-<section id="about" class="py-20 bg-white" data-aos="fade-up">
+<section id="about" class="py-20 bg-white">
   <div class="container mx-auto px-6 md:px-12">
-    <div class="text-center max-w-3xl mx-auto">
-      <h2 class="text-4xl font-bold text-primary font-display mb-6">About Hybrid Interiors</h2>
-      <p class="text-gray-700 text-lg leading-relaxed">
-        At Hybrid Interiors, we believe that a beautifully designed space has the power to elevate your lifestyle, mindset, and success. Founded in Kenya, we are a creative interior design company dedicated to transforming residential and commercial spaces into elegant, functional works of art.
-      </p>
-      <p class="text-gray-700 text-lg mt-4 leading-relaxed">
-        From custom-made furniture and modern fit-outs to color schemes, lighting, and layout — we take a holistic approach to every project. Whether you're building a dream home, designing an inspiring office, or refreshing a rental space, Hybrid Interiors brings your vision to life with style and precision.
-      </p>
-      <p class="text-gray-700 text-lg mt-4 leading-relaxed">
-        Our Nairobi-based team of designers, artisans, and project managers collaborates with you from concept to installation. We combine trend-forward creativity with local craftsmanship and a deep understanding of what makes Kenyan spaces unique.
-      </p>
-      <p class="text-gray-700 text-lg mt-4 leading-relaxed font-semibold">
-        We're not just decorating — we're building spaces that tell your story.
-      </p>
+    <h2 class="text-4xl font-bold text-green-700 text-center mb-12">
+      About Hybrid Interiors
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="about-card bg-white shadow-lg rounded-2xl p-6 transform -rotate-1 hover:rotate-0 hover:shadow-2xl transition duration-300 opacity-0 translate-y-8 cursor-pointer">
+        <h3 class="text-xl font-semibold text-orange-600 mb-4">Who We Are</h3>
+        <p class="text-gray-700 leading-relaxed">
+          At Hybrid Interiors, we believe a beautifully designed space can elevate your lifestyle, mindset, and success.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="about-card bg-white shadow-lg rounded-2xl p-6 transform rotate-1 hover:rotate-0 hover:shadow-2xl transition duration-300 opacity-0 translate-y-8 cursor-pointer">
+        <h3 class="text-xl font-semibold text-orange-600 mb-4">What We Do</h3>
+        <p class="text-gray-700 leading-relaxed">
+          From custom furniture to lighting and layouts, we take a holistic approach to every project with style and precision.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="about-card bg-white shadow-lg rounded-2xl p-6 transform -rotate-2 hover:rotate-0 hover:shadow-2xl transition duration-300 opacity-0 translate-y-8 cursor-pointer">
+        <h3 class="text-xl font-semibold text-orange-600 mb-4">Our Vision</h3>
+        <p class="text-gray-700 leading-relaxed">
+          We're not just decorating — we're creating spaces that tell your story, blending creativity with Kenyan craftsmanship.
+        </p>
+      </div>
     </div>
   </div>
-
 </section>
 <section class="py-16 bg-gray-100">
   <div class="max-w-7xl mx-auto px-6">
@@ -766,6 +784,33 @@
       1024: { slidesPerView: 5 },
     },
   });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".about-card");
+
+  // Entrance animation (staggered)
+  cards.forEach((card, index) => {
+    setTimeout(() => {
+      card.classList.remove("opacity-0", "translate-y-8");
+      card.classList.add("opacity-100", "translate-y-0");
+    }, index * 200);
+  });
+
+  // Ripple effect on click
+  cards.forEach(card => {
+    card.addEventListener("click", e => {
+      const ripple = document.createElement("span");
+      ripple.className = "ripple-effect";
+      const rect = card.getBoundingClientRect();
+      ripple.style.left = `${e.clientX - rect.left}px`;
+      ripple.style.top = `${e.clientY - rect.top}px`;
+      card.appendChild(ripple);
+
+      setTimeout(() => ripple.remove(), 600);
+    });
+  });
+});
 </script>
 </body>
 </html>
