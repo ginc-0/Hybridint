@@ -61,6 +61,18 @@
   @apply shadow-2xl;
 }
 </style>
+<style>
+.tilt-card {
+  @apply transition-transform duration-500 ease-in-out; /* Tailwind */
+  animation: tiltAnim 6s infinite alternate ease-in-out;
+}
+
+@keyframes tiltAnim {
+  0% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+  100% { transform: rotate(-2deg); }
+}
+</style>
 <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <!-- Tailwind CSS -->
@@ -478,6 +490,52 @@
     </div>
   </div>
 </section>
+<section id="testimonials" class="py-20 bg-gray-100">
+  <div class="container mx-auto px-6 md:px-12">
+    <h2 class="text-4xl font-bold text-green-700 text-center mb-12">
+      What Our Clients Say
+    </h2>
+
+    <!-- Swiper -->
+    <div class="swiper testimonial-slider">
+      <div class="swiper-wrapper">
+        <!-- Testimonial 1 -->
+        <div class="swiper-slide">
+          <div class="tilt-card bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition duration-300">
+            <p class="text-gray-700 leading-relaxed mb-4">
+              "Hybrid Interiors turned my office into a space that inspires creativity every day. Their team listened to every detail I wanted."
+            </p>
+            <h4 class="text-green-600 font-semibold">— Alice Mwangi, Creative Director at Watu Credit</h4>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="swiper-slide">
+          <div class="tilt-card bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition duration-300">
+            <p class="text-gray-700 leading-relaxed mb-4">
+              "I was amazed by how they transformed my living room. Modern, elegant, yet cozy. Truly a professional team."
+            </p>
+            <h4 class="text-green-600 font-semibold">— James Otieno, Ga Insurance</h4>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="swiper-slide">
+          <div class="tilt-card bg-white shadow-lg rounded-2xl p-6 hover:shadow-2xl transition duration-300">
+            <p class="text-gray-700 leading-relaxed mb-4">
+              "From concept to installation, Hybrid Interiors delivered exactly what I envisioned. My home feels like a high-end retreat."
+            </p>
+            <h4 class="text-green-600 font-semibold">— Beatrice Njeri, Victory Farms</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination mt-6"></div>
+    </div>
+  </div>
+</section>
+<
 <!-- Blog Section -->
 <section id="blog" class="py-20 bg-gray-100">
   <div class="container mx-auto text-center">
@@ -780,6 +838,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  const testimonialSwiper = new Swiper(".testimonial-slider", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 4000, // 4 seconds per slide
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
 </script>
 </body>
 </html>
