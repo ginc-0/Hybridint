@@ -73,6 +73,36 @@
   100% { transform: rotate(-2deg); }
 }
 </style>
+<style>
+/* Tilt animation */
+.tilt-card {
+  @apply transition-transform duration-500 ease-in-out; /* Tailwind */
+  animation: tiltAnim 6s infinite alternate ease-in-out;
+}
+
+@keyframes tiltAnim {
+  0% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+  100% { transform: rotate(-2deg); }
+}
+
+/* Fade-up animation for scroll */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for cards (optional) */
+.fade-up:nth-child(1) { transition-delay: 0.2s; }
+.fade-up:nth-child(2) { transition-delay: 0.4s; }
+.fade-up:nth-child(3) { transition-delay: 0.6s; }
+</style>
 <!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <!-- Tailwind CSS -->
@@ -175,7 +205,6 @@
     hero.style.backgroundImage = `url('${images[index]}')`;
   }, 3000); //  5seconds per slide
 </script>
-
 <section id="about" class="py-20 bg-white">
   <div class="container mx-auto px-6 md:px-12">
     <h2 class="text-4xl font-bold text-green-700 text-center mb-12">
@@ -184,7 +213,7 @@
 
     <div class="grid md:grid-cols-3 gap-8">
       <!-- Card 1 -->
-      <div class="about-card bg-white shadow-lg rounded-2xl p-6 transform -rotate-1 hover:rotate-0 hover:shadow-2xl transition duration-300 opacity-0 translate-y-8 cursor-pointer">
+      <div class="about-card tilt-card fade-up bg-white shadow-lg rounded-2xl p-6 cursor-pointer">
         <h3 class="text-xl font-semibold text-orange-600 mb-4">Who We Are</h3>
         <p class="text-gray-700 leading-relaxed">
           At Hybrid Interiors, we believe a beautifully designed space can elevate your lifestyle, mindset, and success.
@@ -192,7 +221,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="about-card bg-white shadow-lg rounded-2xl p-6 transform rotate-1 hover:rotate-0 hover:shadow-2xl transition duration-300 opacity-0 translate-y-8 cursor-pointer">
+      <div class="about-card tilt-card fade-up bg-white shadow-lg rounded-2xl p-6 cursor-pointer">
         <h3 class="text-xl font-semibold text-orange-600 mb-4">What We Do</h3>
         <p class="text-gray-700 leading-relaxed">
           From custom furniture to lighting and layouts, we take a holistic approach to every project with style and precision.
@@ -200,7 +229,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="about-card bg-white shadow-lg rounded-2xl p-6 transform -rotate-2 hover:rotate-0 hover:shadow-2xl transition duration-300 opacity-0 translate-y-8 cursor-pointer">
+      <div class="about-card tilt-card fade-up bg-white shadow-lg rounded-2xl p-6 cursor-pointer">
         <h3 class="text-xl font-semibold text-orange-600 mb-4">Our Vision</h3>
         <p class="text-gray-700 leading-relaxed">
           We're not just decorating — we're creating spaces that tell your story, blending creativity with Kenyan craftsmanship.
@@ -209,6 +238,7 @@
     </div>
   </div>
 </section>
+
 <section class="py-16 bg-gray-100">
   <div class="max-w-7xl mx-auto px-6">
     <h2 class="text-3xl font-bold text-center text-green-700 mb-12">
@@ -858,6 +888,32 @@ document.addEventListener("DOMContentLoaded", () => {
       clickable: true,
     },
   });
+</script>
+<script>
+// Fade-up on scroll
+const cards = document.querySelectorAll('.fade-up');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+cards.forEach(card => observer.observe(card));
+const cards = document.querySelectorAll('.fade-up');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+cards.forEach(card => observer.observe(card));
 </script>
 </body>
 </html>
